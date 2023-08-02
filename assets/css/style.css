@@ -1,0 +1,198 @@
+/* ============================ Custom Fonts ============================ */
+@font-face{
+    font-family: theme-font;
+    src: url("/assets/fonts/JosefinSans-Regular.ttf");
+}
+@font-face{
+    font-family: theme-medium;
+    src: url("/assets/fonts/JosefinSans-Medium.ttf");
+}
+@font-face{
+    font-family: theme-bold;
+    src: url("/assets/fonts/JosefinSans-Bold.ttf");
+}
+/* ============================ Base ============================ */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Custom Color */
+    --theme-color:#FF3D4F;
+    --light-white-color:#fff;
+    --theme-black-color:#000;
+    --gray-light-color:#9c9494;
+    /* Typography */
+    --theme-font:theme-medium;
+    --normal-font-size:1rem;
+    --medium-font-size:1.5rem;
+    --medium-width:600;
+    --havy-width:800;
+}
+body{
+    font-family: var(--theme-font);
+    font-size: var(--normal-font-size);
+}
+.container{
+    max-width: 1280px;
+    padding: 0 3%;
+    margin: 0 auto;
+}
+ul li{list-style-type: none;} a{text-decoration: none; color: var(--theme-black-color);}
+
+/* ============================ Header Section ============================ */
+.header-section{
+    background: var(--theme-color);
+    position: relative;
+}
+/* ------- Navbar ------- */
+.header-section .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+/* ------- Navigation-Bar ------- */
+.navigation-bar .main-menu ul li{
+    display: inline-block;
+}
+
+.header-section .navbar .navigation-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+/* ------- Nav-logo ------- */
+.header-section .navbar .logo{
+    font-size: 30px;
+}
+.header-section .navbar .logo span{
+    color: var(--light-white-color);
+}
+/* ------- Main Menu ------- */
+/* .navigation-bar .main-menu */
+.navigation-bar .main-menu ul li a{
+    padding: 8px 12px;
+    font-size: var(--normal-font-size);
+}
+.navigation-bar .main-menu .nav-item{
+    margin-right: 35px;
+}
+.navigation-bar .main-menu .nav-link{
+    font-size: var(--normal-font-size);
+}
+.navigation-bar .main-menu .nav-link:hover{
+    color: var(--light-white-color);
+    transition: 0.3s;
+    transform: rotate(90deg);
+}
+/* ------- Icon Group ------- */
+.navigation-bar .icon-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 0;
+    top:4px; 
+    padding: 0;
+    cursor: pointer;
+}
+.navigation-bar .icon-group .search-icon{
+    display: block;
+    z-index: 10;
+    position: absolute;
+}
+.navigation-bar .icon-group .close-icon{
+    margin-left: 50px;
+    z-index: 10;
+}
+#closeBtn{
+    visibility: hidden;
+}
+#closeBtn.active{
+    visibility: visible;
+}
+  
+/* ------- Search Input -------*/
+.navigation-bar .search-input{
+    position: absolute;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+}
+.navigation-bar .search-input{
+    width: 100%;
+    height: 100%;
+    padding: 0 162px;
+    transition: 0.6s;
+    background: var(--light-white-color);
+}
+
+.navigation-bar .search-input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--gray-light-color);
+    font-size: var(--normal-font-size);
+}
+.navigation-bar .search-input input::placeholder{
+    color: var(--gray-light-color);
+    padding: 0 10px;
+}
+.search-input.active{
+    right: 0%;
+}
+/* -------Dropdown -------*/
+.navigation-bar .main-menu .nav-link{
+    position: relative;
+}
+.navigation-bar .main-menu .nav-link .down-icon{
+    position: absolute;
+    top: 8px;
+    margin-left: 2px;
+    transition: 0.3s;
+}
+.navigation-bar .main-menu .nav-link:hover .down-icon{
+    color: var(--light-white-color);
+    transform: rotate(180deg);
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    background: var(--theme-color);
+    width: 278px;
+    height: 135px;
+}
+.dropdown-menu .dropdown-item{
+    padding: 7px 0;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background: var(--light-white-color);
+    width: 100%;
+}
+
+.dropdown-menu.active{
+    display: block;
+}
+
+/*------- Toggle Menu -------*/
+.menu-toggle{
+    position: relative;
+    display: none;
+}
+/* ============================ Base ============================ */
+/* ============================ Base ============================ */
+/* ============================ Base ============================ */
+/* ============================ Base ============================ */
